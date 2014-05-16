@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/style/style.css' />
+    <link rel='stylesheet' href='/style/bootstrap.min.css' />
+    <link rel='stylesheet' href='/style/bootstrap-theme.min.css' />
+    <link rel='stylesheet' href='/style/normalize.min.css' />
+
+    <link href='http://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="col-sm-10 col-sm-offset-1" id="head">
+        <a href="/#posts"><h1 id="name">Bl<span>*</span>g</h1></a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container" id="blog">      
+      <div class="row">
+      </div>
+    </div>
+    
+    <script id="posts-tmpl" type="text/x-handlebars-template">
+      <a href="#" id="addPost" class="nav">
+        <div class="col-md-4 post">
+          <div class="wrap">
+          <span class="glyphicon glyphicon-plus"></span>
+          <span class="navText">Add New Post</span>
+          </div>
+        </div>
+      </a>
+        
+      {{#each items}}
+        
+        <div data-id="{{id}}" class="col-md-4 post">
+          <div class="wrap">
+            <a href="#posts/{{id}}" class="title"><h2>{{title}}</h2></a>
+            <p><span class="glyphicon glyphicon-time"></span> Posted on {{dateFormat createdAt format="MMM Do"}} </p>
+            
+            <a href="#" class="edit">Edit</a> 
+            <a href="#" class="delete">Delete</a>
+          </div>
+        </div>
+      {{/each}}
+    </script>
+
+    <script id="post-tmpl" type="text/x-handlebars-template">
+      <div data-id="{{id}}" class="wrap col-sm-6">
+        <h2>{{title}}</h2>
+        <p>{{content}}</p>
+        <p><span class="glyphicon glyphicon-time"></span> Posted on {{dateFormat createdAt format="MMM Do"}} </p>
+      </div>
+
+      <a href="#" id="goBack" class="nav">
+        <div class="col-sm-4">
+          <div class="wrap">
+            <span class="glyphicon glyphicon-remove"></span>
+            <span class="navText">Go Back</span>
+          </div>
+        </div>
+      </a>
+    </script>
+
+    <script id="add-post-tmpl" type="text/x-handlebars-template">
+      <div class="col-sm-6">
+        <form name="form" role="form">
+          <div class="form-group">
+            <input class="form-control" placeholder="Title" value="{{#if title}}{{title}}{{/if}}" id="titleEl"/>  
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Blogpost" id="contentEl" cols="30" rows="15">{{#if content}}{{content}}{{/if}}</textarea>
+          </div>
+          <button class="btn" id="add">{{#if content}}Update{{else}}Add blogpost{{/if}}</button>
+        </form>
+      </div>
+
+      <a href="#" id="goBack" class="nav">
+        <div class="col-sm-4">
+          <div class="wrap">
+            <span class="glyphicon glyphicon-remove"></span>
+            <span class="navText">Go Back</span>
+          </div>
+        </div>
+      </a>
+      <div class="col-sm-4 status"></div>
+    </script>
+
+    <script src="/javascripts/jquery-1.11.0.js"></script>
+    <script src="/javascripts/moment.js"></script>
+    <script src="/javascripts/handlebars-v1.3.0.js"></script>
+    <script src="/javascripts/handlebar-datetime.js"></script>
+    <script src="/javascripts/underscore.js"></script>
+    <script src="/javascripts/backbone.js"></script>
+    <script src="/javascripts/post.js"></script>
+  </body>
+</html>

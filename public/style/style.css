@@ -1,0 +1,174 @@
+
+
+body {
+  
+  font: 14px "Prata", serif !important;
+  background-color: #e9e9e9 !important;
+  line-height: 1.56 !important;
+  padding-bottom: 100px;
+
+}
+
+a {
+  color: #00B7FF;
+}
+
+#blog { padding-top: 30px;}
+#blog ul { padding: 0; list-style: none;}
+#blog li { list-style: none; margin:0}
+#blog li input { margin-right: 8px; }
+
+#textEl{
+  display: block;
+}
+
+.glyphicon-plus, .glyphicon-remove{
+  font-size: 80px;
+  margin: 0 auto;
+  text-align: center;
+  width: 80px;
+  display: block !important;
+  padding-top: 20px;
+}
+
+.nav:hover .glyphicon{
+  color: #68ddab;
+}
+
+.nav .glyphicon{
+  color: #333;
+}
+.navText{
+  text-align: center;
+  display: none;
+  color: #333;
+}
+
+.nav:hover .navText{
+  display: block;
+  margin: 9px auto;
+}
+
+.menu{
+  padding-bottom: 20px;
+}
+
+.btn#add{
+  background-color: #7fdbb3;
+  font-family: 'Prata', serif;
+  color: #333;
+}
+
+.btn#add:hover{
+  background-color: #e8f6f3;
+  color: #68ddab;
+}
+
+.status{
+  text-align: center;
+  
+}
+.status>p{
+  padding: 15px 0;
+  background-color: #fff;
+}
+
+header{
+  background-color: #222;
+}
+#head{
+/*padding-left: 0;*/
+}
+
+.title{
+  display: inline-block;
+}
+
+.title:hover{
+  text-decoration: none;
+}
+
+.title>h2{
+  border-bottom: 2px solid #68ddab;
+}
+
+.title>h2:hover{
+  background-color: #68ddab;
+}
+
+h1#name{
+  font-family: 'Prata',serif;
+  color: #fdfdfd;
+  font-size: 70px;
+  padding-top: 20px;
+  padding-right: 10px;
+  border-top: 2px solid #fdfdfd;
+  display: inline-block;
+  
+}
+
+#name:hover{
+  border-color: #68ddab;
+}
+
+#name:hover span{
+  color: #68ddab;
+}
+
+#name>span{
+  display: inline-block;
+  position: relative;
+  top: 30px;
+  font-size: 90px;
+  line-height: 20px;
+}
+
+.post{
+  
+  color: #333;
+  margin-top: 15px;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  font-family: 'Prata';
+
+  
+}
+
+#contentEl, #titleEl{
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.post a{
+  color: #333;
+}
+
+.post a:hover{
+  color: #000;
+}
+
+.singel-post{
+  margin-top: 15px;
+}
+
+.edit,.delete{
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  border-bottom: 2px solid #777;
+  margin: 0 5px;
+}
+
+.edit:hover,.delete:hover{
+  background-color: #777;
+}
+
+.wrap{
+    background-color: #fff;
+    padding: 15px;
+    min-height: 169px;
+}
+
+.wrap:hover{
+  background-color: #e8f6f3;
+}
